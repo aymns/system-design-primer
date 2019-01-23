@@ -1,138 +1,140 @@
-*[English](README.md) ∙ [日本語](README-ja.md) ∙ [简体中文](README-zh-Hans.md) ∙ [繁體中文](README-zh-TW.md) | [Brazilian Portuguese](https://github.com/donnemartin/system-design-primer/issues/170) ∙ [Arabic](https://github.com/donnemartin/system-design-primer/issues/40) ∙ [Greek](https://github.com/donnemartin/system-design-primer/issues/130) ∙ [Italian](https://github.com/donnemartin/system-design-primer/issues/104) ∙ [Korean](https://github.com/donnemartin/system-design-primer/issues/102) ∙ [Persian](https://github.com/donnemartin/system-design-primer/issues/110) ∙ [Polish](https://github.com/donnemartin/system-design-primer/issues/68) ∙ [Russian](https://github.com/donnemartin/system-design-primer/issues/87) ∙ [Spanish](https://github.com/donnemartin/system-design-primer/issues/136) ∙ [Turkish](https://github.com/donnemartin/system-design-primer/issues/39) ∙ [Vietnamese](https://github.com/donnemartin/system-design-primer/issues/127) | [Add Translation](https://github.com/donnemartin/system-design-primer/issues/28)*
+*[English](README.md) ∙ [日本語](README-ja.md) ∙ [简体中文](README-zh-Hans.md) ∙ [繁體中文](README-zh-TW.md) | [Brazilian Portuguese](https://github.com/donnemartin/system-design-primer/issues/40) ∙ [Greek](https://github.com/donnemartin/system-design-primer/issues/130) ∙ [Italian](https://github.com/donnemartin/system-design-primer/issues/104) ∙ [Korean](https://github.com/donnemartin/system-design-primer/issues/102) ∙ [Persian](https://github.com/donnemartin/system-design-primer/issues/110) ∙ [Polish](https://github.com/donnemartin/system-design-primer/issues/68) ∙ [Russian](https://github.com/donnemartin/system-design-primer/issues/87) ∙ [Spanish](https://github.com/donnemartin/system-design-primer/issues/136) ∙ [Turkish](https://github.com/donnemartin/system-design-primer/issues/39) ∙ [Vietnamese](https://github.com/donnemartin/system-design-primer/issues/127) | [Add Translation](https://github.com/donnemartin/system-design-primer/issues/28)*
 
-# The System Design Primer
+# مقدمة تصميم الأنظمة
 
 <p align="center">
   <img src="http://i.imgur.com/jj3A5N8.png">
   <br/>
 </p>
 
-## Motivation
+## الدوافع
 
-> Learn how to design large-scale systems.
+> تعلم تصميم الأنظمة الضخمة
 >
-> Prep for the system design interview.
+> التحضير لمقابلة تصميم الأنظمة.
 
-### Learn how to design large-scale systems
+### تعلم تصميم الأنظمة الضخمة
 
-Learning how to design scalable systems will help you become a better engineer.
+تعلم كيفية تصميم الأنظمة الضخمة يمكنك من أن تصبح مهندس أفضل.
 
-System design is a broad topic.  There is a **vast amount of resources scattered throughout the web** on system design principles.
+تصميم الأنظمة موضوع واسع.  هناك **عدد هائل من المصادر المنتشرة على الانترنت** لمبادئ تصميم الأنظمة.
 
-This repo is an **organized collection** of resources to help you learn how to build systems at scale.
+هذا المشروع هو **مجموعة منظمة** من المصادر التي تساعدك على تعلم كيفية بناء نظام ضخم.
 
-### Learn from the open source community
+### تعلم من مجتمع المصادر المفتوحة 
 
-This is an early draft of a continually updated, open source project.
+هذه نسخة أولية من مشروع مفتوح المصدر محدث باستمرار.
 
-[Contributions](#contributing) are welcome!
+[المساهمات](#contributing) مرحب بها!
 
-### Prep for the system design interview
+### التحضير لمقابلة تصميم الأنظمة
 
-In addition to coding interviews, system design is a **required component** of the **technical interview process** at many tech companies.
+بالإضافة لمقابلات البرمجة، تصميم الأنظمة **عنصر أساسي** من أي **مقابلة تقنية** في الكثير من شركات التكنولوجيا.
 
-**Practice common system design interview questions** and **compare** your results with **sample solutions**: discussions, code, and diagrams.
+**تمرن على الأسئلة الشائعة لتصميم الأنظمة** و **قارن** اجاباتك ب **بالإجابات المقترحة**: نقاشات، أكواد ومخططات
 
-Additional topics for interview prep:
+مواضيع التحضير للمقابلة:
 
-* [Study guide](#study-guide)
-* [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question)
-* [System design interview questions, **with solutions**](#system-design-interview-questions-with-solutions)
-* [Object-oriented design interview questions, **with solutions**](#object-oriented-design-interview-questions-with-solutions)
-* [Additional system design interview questions](#additional-system-design-interview-questions)
+* [دليل الدراسة](#study-guide)
+* [كيف تتعامل مع سؤال تصميم الأنظمة في المقابلات](#how-to-approach-a-system-design-interview-question)
+* [أسئلة تصميم أنظمة في المقابلات, **مع الاجابات**](#system-design-interview-questions-with-solutions)
+* [Object-oriented أسئلة مقابلات في ال, **مع الاجابات**](#object-oriented-design-interview-questions-with-solutions)
+* [اسئلة تصميم أنظمة اضافية](#additional-system-design-interview-questions)
 
-## Anki flashcards
+## بطاقات استذكار Anki
 
 <p align="center">
   <img src="http://i.imgur.com/zdCAkB3.png">
   <br/>
 </p>
 
-The provided [Anki flashcard decks](https://apps.ankiweb.net/) use spaced repetition to help you retain key system design concepts.
+[بطاقات استذكار Anki] التالية تساعدك في حفظ مفاهيم اساسية في تصميم الأنظمة
 
-* [System design deck](resources/flash_cards/System%20Design.apkg)
-* [System design exercises deck](resources/flash_cards/System%20Design%20Exercises.apkg)
-* [Object oriented design exercises deck](resources/flash_cards/OO%20Design.apkg)
+* [تصميم الأنظمة](resources/flash_cards/System%20Design.apkg)
+* [تدريبات تصميم الأنظمة](resources/flash_cards/System%20Design%20Exercises.apkg)
+* [تدريبات تصميم ال Object-oriented](resources/flash_cards/OO%20Design.apkg)
 
-Great for use while on-the-go.
+مفيدة جدا للاستخدام اثناء التنقل.
 
-### Coding Resource: Interactive Coding Challenges
+### مصادر برمجية: تحديات برمجية تفاعلية
 
-Looking for resources to help you prep for the [**Coding Interview**](https://github.com/donnemartin/interactive-coding-challenges)?
+تبحث عن مصادر مساعدة للتحضير [**لمقابلة برمجة**]
+(https://github.com/donnemartin/interactive-coding-challenges)?
 
 <p align="center">
   <img src="http://i.imgur.com/b4YtAEN.png">
   <br/>
 </p>
 
-Check out the sister repo [**Interactive Coding Challenges**](https://github.com/donnemartin/interactive-coding-challenges), which contains an additional Anki deck:
+
+تفقد هذا المشروع [**Interactive Coding Challenges**](https://github.com/donnemartin/interactive-coding-challenges), الذي يحتوي على المزيد من بطاقات الاستذكار:
 
 * [Coding deck](https://github.com/donnemartin/interactive-coding-challenges/tree/master/anki_cards/Coding.apkg)
 
-## Contributing
+## المساهمة
 
-> Learn from the community.
+> تعلم من المجتمع.
 
-Feel free to submit pull requests to help:
+يمكنك المساعدة ب:
 
-* Fix errors
-* Improve sections
-* Add new sections
-* [Translate](https://github.com/donnemartin/system-design-primer/issues/28)
+* تصحيح الأخطاء
+* تحسين الأقسام
+* اضافة اقسام جديدة
+* [الترجمة](https://github.com/donnemartin/system-design-primer/issues/28)
 
-Content that needs some polishing is placed [under development](#under-development).
+المحتوى الذي يحتاج بعض المراجعة يوضع [قيد التطوير](#under-development).
 
-Review the [Contributing Guidelines](CONTRIBUTING.md).
+انظر [ارشادات المساهمة](CONTRIBUTING.md).
 
-## Index of system design topics
+## فهرسة مواضيع تصميم الأنظمة
 
-> Summaries of various system design topics, including pros and cons.  **Everything is a trade-off**.
+> ملخص مواضيع متعددة في تصميم الأنظمة، تتضمن ايجابيات وسلبيات .  **تنازل عن ميزة ممن أجل الحصول على أخرى**.
 >
-> Each section contains links to more in-depth resources.
+> كل قسم يحتوي على روابط لمصادر متعمقة.
 
 <p align="center">
   <img src="http://i.imgur.com/jrUBAF7.png">
   <br/>
 </p>
 
-* [System design topics: start here](#system-design-topics-start-here)
-    * [Step 1: Review the scalability video lecture](#step-1-review-the-scalability-video-lecture)
-    * [Step 2: Review the scalability article](#step-2-review-the-scalability-article)
-    * [Next steps](#next-steps)
-* [Performance vs scalability](#performance-vs-scalability)
-* [Latency vs throughput](#latency-vs-throughput)
-* [Availability vs consistency](#availability-vs-consistency)
-    * [CAP theorem](#cap-theorem)
-        * [CP - consistency and partition tolerance](#cp---consistency-and-partition-tolerance)
+* [مواضيع تصميم الأنظمة: ابدأ من هنا](#system-design-topics-start-here)
+    * [خطوة 1: محاضرة قابلية التوسع والتطوير](#step-1-review-the-scalability-video-lecture)
+    * [خطوة 2: مقالة قابلية التوسع والنطوير](#step-2-review-the-scalability-article)
+    * [الخطوات التالية](#next-steps)
+* [الأداء مقابل التوسع وقابلية التطوير](#performance-vs-scalability)
+* [وقت الاستجابة مقابل الإنتاجية](#latency-vs-throughput)
+* [التوفر مقابل التطابق](#availability-vs-consistency)
+    * [نظرية CAP](#cap-theorem)
+        * [CP - التطابق وتجاوز التجزئة](#cp---consistency-and-partition-tolerance)
         * [AP - availability and partition tolerance](#ap---availability-and-partition-tolerance)
-* [Consistency patterns](#consistency-patterns)
-    * [Weak consistency](#weak-consistency)
-    * [Eventual consistency](#eventual-consistency)
-    * [Strong consistency](#strong-consistency)
-* [Availability patterns](#availability-patterns)
-    * [Fail-over](#fail-over)
-    * [Replication](#replication)
-* [Domain name system](#domain-name-system)
-* [Content delivery network](#content-delivery-network)
+* [أنماط التطابق](#consistency-patterns)
+    * [تطابق ضعيف](#weak-consistency)
+    * [التطابق النهائي](#eventual-consistency)
+    * [التطابق القوي](#strong-consistency)
+* [أنماط التوفر](#availability-patterns)
+    * [الدعم الإحتياطي](#fail-over)
+    * [التكرار](#replication)
+* [نظام اسم النطاق](#domain-name-system)
+* [شبكة توصيل المحتوى](#content-delivery-network)
     * [Push CDNs](#push-cdns)
     * [Pull CDNs](#pull-cdns)
-* [Load balancer](#load-balancer)
-    * [Active-passive](#active-passive)
-    * [Active-active](#active-active)
-    * [Layer 4 load balancing](#layer-4-load-balancing)
-    * [Layer 7 load balancing](#layer-7-load-balancing)
-    * [Horizontal scaling](#horizontal-scaling)
-* [Reverse proxy (web server)](#reverse-proxy-web-server)
-    * [Load balancer vs reverse proxy](#load-balancer-vs-reverse-proxy)
-* [Application layer](#application-layer)
+* [موازن الأحمال](#load-balancer)
+    * [نشط-خامل](#active-passive)
+    * [نشط-نشط](#active-active)
+    * [موازنة أحمال الطبقة 4](#layer-4-load-balancing)
+    * [موازنة أحمال الطبقة 7](#layer-7-load-balancing)
+    * [التمدد الأفقي](#horizontal-scaling)
+* [وكيل عكسي (خادم الشبكة)](#reverse-proxy-web-server)
+    * [موزع الأحمال vs وكيل عكسي](#load-balancer-vs-reverse-proxy)
+* [طبقة التطبيق](#application-layer)
     * [Microservices](#microservices)
-    * [Service discovery](#service-discovery)
-* [Database](#database)
-    * [Relational database management system (RDBMS)](#relational-database-management-system-rdbms)
+    * [اكتشاف الخدمة](#service-discovery)
+* [قواعد بيانات](#database)
+    * [نظام ادارة قواعد البيانات العلائقية (RDBMS)](#relational-database-management-system-rdbms)
         * [Master-slave replication](#master-slave-replication)
         * [Master-master replication](#master-master-replication)
-        * [Federation](#federation)
-        * [Sharding](#sharding)
+        * [اتحاد](#federation)
+        * [تجزئة](#sharding)
         * [Denormalization](#denormalization)
         * [SQL tuning](#sql-tuning)
     * [NoSQL](#nosql)
@@ -176,73 +178,73 @@ Review the [Contributing Guidelines](CONTRIBUTING.md).
 * [Contact info](#contact-info)
 * [License](#license)
 
-## Study guide
+## ارشادات الدراسة
 
-> Suggested topics to review based on your interview timeline (short, medium, long).
+> مواضيع مقترحة للمراجعة بناءاً على الجدول الزمني للمقابلة (قصير, متوسط, طويل).
 
 ![Imgur](http://i.imgur.com/OfVllex.png)
 
-**Q: For interviews, do I need to know everything here?**
+**س: هل يجب علي معرفة كل شيء هنا لإجتياز المقابلات ?**
 
-**A: No, you don't need to know everything here to prepare for the interview**.
+**ج: لا، ليس عليك معرفة كل شيء هنا للتحضير لمقابلة**.
 
-What you are asked in an interview depends on variables such as:
+ما يتم سؤالك عنه في المقابلات يعتمد على:
 
-* How much experience you have
-* What your technical background is
-* What positions you are interviewing for
-* Which companies you are interviewing with
-* Luck
+* الخبرة التي لديك
+* خلفيتك التقنية
+* طبيعة الوظيفة 
+* جهة العمل التي تقابلك
+* الحظ
 
-More experienced candidates are generally expected to know more about system design.  Architects or team leads might be expected to know more than individual contributors.  Top tech companies are likely to have one or more design interview rounds.
+يتوقع من المرشحين الأكثر خبرة بشكل عام ان تكون لديهم دراية أكبر عن تصميم الأنظمة. ربما يتوقع من المهندسون أو رؤساء الفرق ان تكون لديهم معرفة أكبر من باقي افراد الفريق. في الشركات التقنية الرائدة غالبا ما يكون هناك جولة أو اكثر من مقابلات تصميم النظام.
 
-Start broad and go deeper in a few areas.  It helps to know a little about various key system design topics.  Adjust the following guide based on your timeline, experience, what positions you are interviewing for, and which companies you are interviewing with.
+ابدأ بشكل موسع ثم تعمق في بعض المواضيع. معرفة بسيطة عن بعض المواضيع المتنوعة لتصميم الأنظمة قد تساعدك كثيرا. عدل الدليل الإرشادي التالي بما يتناسب مع جدولك الزمني وخبرتك والوظيفة التي تقدم عليها بالإضافة لجهة العمل التي تقابلك.
 
-* **Short timeline** - Aim for **breadth** with system design topics.  Practice by solving **some** interview questions.
-* **Medium timeline** - Aim for **breadth** and **some depth** with system design topics.  Practice by solving **many** interview questions.
-* **Long timeline** - Aim for **breadth** and **more depth** with system design topics.  Practice by solving **most** interview questions.
+* **جدول زمني قصير** - التركيز على **التوسع** في مواضيع تصميم الأنظمة.  بالتدريب على حل **بعض** اسئلة المقابلات.
+* **جدول زمني متوسط** - التركيز على **التوسع** و **بعض التعمق** في مواضيع تصميم الأنظمة.  والتدريب على حل **العديد** من اسئلة المقابلات.
+* **جدول زمني طويل** - التركيز على **التوسع** و **تعمق أكثر** في مواضيع تصميم الأنظمة.  تدرب على حل **معظم** أسئلة المقابلات.
 
-| | Short | Medium | Long |
+| | قصير | متوسط | طويل |
 |---|---|---|---|
-| Read through the [System design topics](#index-of-system-design-topics) to get a broad understanding of how systems work | :+1: | :+1: | :+1: |
-| Read through a few articles in the [Company engineering blogs](#company-engineering-blogs) for the companies you are interviewing with | :+1: | :+1: | :+1: |
-| Read through a few [Real world architectures](#real-world-architectures) | :+1: | :+1: | :+1: |
-| Review [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question) | :+1: | :+1: | :+1: |
-| Work through [System design interview questions with solutions](#system-design-interview-questions-with-solutions) | Some | Many | Most |
-| Work through [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions) | Some | Many | Most |
-| Review [Additional system design interview questions](#additional-system-design-interview-questions) | Some | Many | Most |
+| اقرأ [مواضيع تصميم الأنظمة](#index-of-system-design-topics) لتأخذ نظرة عامة على كيفية عمل الأنظمة | :+1: | :+1: | :+1: |
+| اقرأ بعض المقالات في [المدونة الهندسية للشركة](#company-engineering-blogs) التي ستجري لك المقابلة | :+1: | :+1: | :+1: |
+| اقرأ بعض المقالات عن [تصاميم هندسية من الواقع](#real-world-architectures) | :+1: | :+1: | :+1: |
+| استعرض [كيف تتعامل مع السؤال في مقابلة تصميم الأنظمة](#how-to-approach-a-system-design-interview-question) | :+1: | :+1: | :+1: |
+| ادرس [اسئلة مقابلات تصميم الأنظمة مع الحلول](#system-design-interview-questions-with-solutions) | البعض | العديد | معظم |
+| ادرس [اسئلة مقابلات في تصميم Object-oriented مع الحلول](#object-oriented-design-interview-questions-with-solutions) | البعض | العديد | معظم |
+| راجع [اسئلة مقابلات اضافية في تصميم الأنظمة](#additional-system-design-interview-questions) | البعض | العديد | معظم |
 
-## How to approach a system design interview question
+## كيف تتعامل مع سؤال في مقابلة تصميم الانظمة
 
-> How to tackle a system design interview question.
+> كيفية معالجة السؤال
 
-The system design interview is an **open-ended conversation**.  You are expected to lead it.
+تكون مقابلة تصميم الأنظمة **محادثة مفتوحة**.  يتوقع منك ان تقودها.
 
-You can use the following steps to guide the discussion.  To help solidify this process, work through the [System design interview questions with solutions](#system-design-interview-questions-with-solutions) section using the following steps.
+يمكنك اتخاذ الخطوات التالية لتوجيه النقاش. للمساعدة في ترسيخ هذه العملية، ادرس قسم [اسئلة مقابلة تصميم الأنظمة مع الحلول](#system-design-interview-questions-with-solutions) باستخدام الخطوات التالية.
 
-### Step 1: Outline use cases, constraints, and assumptions
+### خطوة 1: أجمل (حالات الإستخدام، القيود، والفرضيات)
 
-Gather requirements and scope the problem.  Ask questions to clarify use cases and constraints.  Discuss assumptions.
+جمع المتطلبات واحصر المشكلة. اسأل عن توضيح حالات الاستخدام والقيود وناقش الفرضيات.
 
-* Who is going to use it?
-* How are they going to use it?
-* How many users are there?
-* What does the system do?
-* What are the inputs and outputs of the system?
-* How much data do we expect to handle?
-* How many requests per second do we expect?
-* What is the expected read to write ratio?
+* من سيستخدم النظام ?
+* كيف سيتم استخدامه?
+* كم عدد المستخدمين?
+* ماذا يقدم النظام?
+* ماهي مدخلات ومخرجات النظام?
+* كم عدد البيانات المتوقع معالجتها?
+* كم عدد الطلبات المتوقع لكل ثانية?
+* ماهو معدل المتوقع للقراءة مقابل الكتابة?
 
-### Step 2: Create a high level design
+### خطوة 2: انشئ تصميم عام
 
-Outline a high level design with all important components.
+لخص التصميم العام مع كل المكونات الاساسية.
 
-* Sketch the main components and connections
-* Justify your ideas
+* ارسم مسودة للمكونات الاساسية والعلاقة ما بينها
+* برر أفكارك
 
-### Step 3: Design core components
+### خطوة 3: صمم المكونات الأساسية
 
-Dive into details for each core component.  For example, if you were asked to [design a url shortening service](solutions/system_design/pastebin/README.md), discuss:
+تعمق في تفاصيل كل مكون. مثلا، اذا طلب منك [تصميم خدمة اختصار روابط](solutions/system_design/pastebin/README.md), ناقش:
 
 * Generating and storing a hash of the full url
     * [MD5](solutions/system_design/pastebin/README.md) and [Base62](solutions/system_design/pastebin/README.md)
