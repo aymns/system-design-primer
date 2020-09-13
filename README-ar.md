@@ -1,469 +1,473 @@
-*[English](README.md) ∙ [日本語](README-ja.md) ∙ [简体中文](README-zh-Hans.md) ∙ [繁體中文](README-zh-TW.md) | [Brazilian Portuguese](https://github.com/donnemartin/system-design-primer/issues/170) ∙ [Arabic](https://github.com/donnemartin/system-design-primer/issues/40) ∙ [Greek](https://github.com/donnemartin/system-design-primer/issues/130) ∙ [Italian](https://github.com/donnemartin/system-design-primer/issues/104) ∙ [Korean](https://github.com/donnemartin/system-design-primer/issues/102) ∙ [Persian](https://github.com/donnemartin/system-design-primer/issues/110) ∙ [Polish](https://github.com/donnemartin/system-design-primer/issues/68) ∙ [Russian](https://github.com/donnemartin/system-design-primer/issues/87) ∙ [Spanish](https://github.com/donnemartin/system-design-primer/issues/136) ∙ [Turkish](https://github.com/donnemartin/system-design-primer/issues/39) ∙ [Vietnamese](https://github.com/donnemartin/system-design-primer/issues/127) | [Add Translation](https://github.com/donnemartin/system-design-primer/issues/28)*
+*[English](README.md) ∙ [日本語](README-ja.md) ∙ [简体中文](README-zh-Hans.md) ∙ [繁體中文](README-zh-TW.md) | [العَرَبِيَّة‎](https://github.com/donnemartin/system-design-primer/issues/170) ∙ [বাংলা](https://github.com/donnemartin/system-design-primer/issues/220) ∙ [Português do Brasil](https://github.com/donnemartin/system-design-primer/issues/40) ∙ [Deutsch](https://github.com/donnemartin/system-design-primer/issues/186) ∙ [ελληνικά](https://github.com/donnemartin/system-design-primer/issues/130) ∙ [עברית](https://github.com/donnemartin/system-design-primer/issues/272) ∙ [Italiano](https://github.com/donnemartin/system-design-primer/issues/104) ∙ [한국어](https://github.com/donnemartin/system-design-primer/issues/102) ∙ [فارسی](https://github.com/donnemartin/system-design-primer/issues/110) ∙ [Polski](https://github.com/donnemartin/system-design-primer/issues/68) ∙ [русский язык](https://github.com/donnemartin/system-design-primer/issues/87) ∙ [Español](https://github.com/donnemartin/system-design-primer/issues/136) ∙ [ภาษาไทย](https://github.com/donnemartin/system-design-primer/issues/187) ∙ [Türkçe](https://github.com/donnemartin/system-design-primer/issues/39) ∙ [tiếng Việt](https://github.com/donnemartin/system-design-primer/issues/127) ∙ [Français](https://github.com/donnemartin/system-design-primer/issues/250) | [Add Translation](https://github.com/donnemartin/system-design-primer/issues/28)*
 
-# The System Design Primer
+# مقدمة تصميم الأنظمة
 
 <p align="center">
-  <img src="http://i.imgur.com/jj3A5N8.png">
+  <img src="images/jj3A5N8.png">
   <br/>
 </p>
 
-## Motivation
+## الدوافع
 
-> Learn how to design large-scale systems.
+> تعلم تصميم الأنظمة الضخمة
 >
-> Prep for the system design interview.
+> التحضير لمقابلة تصميم الأنظمة.
 
-### Learn how to design large-scale systems
+### تعلم تصميم الأنظمة الضخمة
 
-Learning how to design scalable systems will help you become a better engineer.
+تعلم كيفية تصميم الأنظمة الضخمة يمكنك من أن تصبح مهندس أفضل.
 
-System design is a broad topic.  There is a **vast amount of resources scattered throughout the web** on system design principles.
+تصميم الأنظمة موضوع واسع.  هناك **عدد هائل من المصادر المنتشرة على الانترنت** لمبادئ تصميم الأنظمة.
 
-This repo is an **organized collection** of resources to help you learn how to build systems at scale.
+هذا المشروع هو **مجموعة منظمة** من المصادر التي تساعدك على تعلم كيفية بناء نظام ضخم.
 
-### Learn from the open source community
+### تعلم من مجتمع المصادر المفتوحة 
 
-This is an early draft of a continually updated, open source project.
+هذا مشروع مفتوح المصدر دائم التحديث.
 
-[Contributions](#contributing) are welcome!
+[المساهمات](#contributing) مرحب بها!
 
-### Prep for the system design interview
+### التحضير لمقابلة تصميم الأنظمة
 
-In addition to coding interviews, system design is a **required component** of the **technical interview process** at many tech companies.
+بالإضافة لمقابلات البرمجة، تصميم الأنظمة **عنصر أساسي** من أي **مقابلة تقنية** في الكثير من شركات التكنولوجيا.
 
-**Practice common system design interview questions** and **compare** your results with **sample solutions**: discussions, code, and diagrams.
+**تمرن على الأسئلة الشائعة لتصميم الأنظمة** و **قارن** اجاباتك ب **بالإجابات المقترحة**: نقاشات، أكواد ومخططات
 
-Additional topics for interview prep:
+مواضيع التحضير للمقابلة:
 
-* [Study guide](#study-guide)
-* [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question)
-* [System design interview questions, **with solutions**](#system-design-interview-questions-with-solutions)
-* [Object-oriented design interview questions, **with solutions**](#object-oriented-design-interview-questions-with-solutions)
-* [Additional system design interview questions](#additional-system-design-interview-questions)
+* [دليل الدراسة](#study-guide)
+* [كيف تتعامل مع سؤال تصميم الأنظمة في المقابلات](#how-to-approach-a-system-design-interview-question)
+* [أسئلة تصميم أنظمة في المقابلات, **مع الاجابات**](#system-design-interview-questions-with-solutions)
+* [Object-oriented أسئلة مقابلات في ال, **مع الاجابات**](#object-oriented-design-interview-questions-with-solutions)
+* [أسئلة إضافية لمقابلات تصميم الأنظمة](#additional-system-design-interview-questions)
 
-## Anki flashcards
+## بطاقات استذكار Anki
 
 <p align="center">
-  <img src="http://i.imgur.com/zdCAkB3.png">
+  <img src="images/zdCAkB3.png">
   <br/>
 </p>
 
-The provided [Anki flashcard decks](https://apps.ankiweb.net/) use spaced repetition to help you retain key system design concepts.
+[بطاقات استذكار Anki] التالية تساعدك في حفظ مفاهيم اساسية في تصميم الأنظمة
 
-* [System design deck](resources/flash_cards/System%20Design.apkg)
-* [System design exercises deck](resources/flash_cards/System%20Design%20Exercises.apkg)
-* [Object oriented design exercises deck](resources/flash_cards/OO%20Design.apkg)
+* [تصميم الأنظمة](resources/flash_cards/System%20Design.apkg)
+* [تدريبات تصميم الأنظمة](resources/flash_cards/System%20Design%20Exercises.apkg)
+* [تدريبات تصميم ال Object-oriented](resources/flash_cards/OO%20Design.apkg)
 
-Great for use while on-the-go.
+مفيدة للإستذكار السريع.
 
-### Coding Resource: Interactive Coding Challenges
+### مصادر برمجية: تحديات برمجية تفاعلية
 
-Looking for resources to help you prep for the [**Coding Interview**](https://github.com/donnemartin/interactive-coding-challenges)?
+تبحث عن مصادر مساعدة للتحضير [**لمقابلة برمجة**]
+(https://github.com/donnemartin/interactive-coding-challenges)?
+
 
 <p align="center">
-  <img src="http://i.imgur.com/b4YtAEN.png">
+  <img src="images/b4YtAEN.png">
   <br/>
 </p>
 
-Check out the sister repo [**Interactive Coding Challenges**](https://github.com/donnemartin/interactive-coding-challenges), which contains an additional Anki deck:
+
+تفقد هذا المشروع [**Interactive Coding Challenges**](https://github.com/donnemartin/interactive-coding-challenges), الذي يحتوي على المزيد من بطاقات الاستذكار:
 
 * [Coding deck](https://github.com/donnemartin/interactive-coding-challenges/tree/master/anki_cards/Coding.apkg)
 
-## Contributing
+## المساهمة
 
-> Learn from the community.
+> تعلم من المجتمع.
 
-Feel free to submit pull requests to help:
+يمكنك المساعدة ب:
 
-* Fix errors
-* Improve sections
-* Add new sections
-* [Translate](https://github.com/donnemartin/system-design-primer/issues/28)
+* تصحيح الأخطاء
+* تحسين الأقسام
+* اضافة اقسام جديدة
+* [الترجمة](https://github.com/donnemartin/system-design-primer/issues/28)
 
-Content that needs some polishing is placed [under development](#under-development).
+المحتوى الذي يحتاج بعض المراجعة يوضع [قيد التطوير](#under-development).
 
-Review the [Contributing Guidelines](CONTRIBUTING.md).
+انظر [ارشادات المساهمة](CONTRIBUTING.md).
 
-## Index of system design topics
+## فهرسة مواضيع تصميم الأنظمة
 
-> Summaries of various system design topics, including pros and cons.  **Everything is a trade-off**.
+> ملخص مواضيع متعددة في تصميم الأنظمة، تتضمن ايجابيات وسلبيات .  **تنازل عن ميزة ممن أجل الحصول على أخرى**.
 >
-> Each section contains links to more in-depth resources.
+> كل قسم يحتوي على روابط لمصادر متعمقة.
 
 <p align="center">
-  <img src="http://i.imgur.com/jrUBAF7.png">
+  <img src="images/jrUBAF7.png">
   <br/>
 </p>
 
-* [System design topics: start here](#system-design-topics-start-here)
-    * [Step 1: Review the scalability video lecture](#step-1-review-the-scalability-video-lecture)
-    * [Step 2: Review the scalability article](#step-2-review-the-scalability-article)
-    * [Next steps](#next-steps)
-* [Performance vs scalability](#performance-vs-scalability)
-* [Latency vs throughput](#latency-vs-throughput)
-* [Availability vs consistency](#availability-vs-consistency)
-    * [CAP theorem](#cap-theorem)
-        * [CP - consistency and partition tolerance](#cp---consistency-and-partition-tolerance)
-        * [AP - availability and partition tolerance](#ap---availability-and-partition-tolerance)
-* [Consistency patterns](#consistency-patterns)
-    * [Weak consistency](#weak-consistency)
-    * [Eventual consistency](#eventual-consistency)
-    * [Strong consistency](#strong-consistency)
-* [Availability patterns](#availability-patterns)
-    * [Fail-over](#fail-over)
-    * [Replication](#replication)
-* [Domain name system](#domain-name-system)
-* [Content delivery network](#content-delivery-network)
-    * [Push CDNs](#push-cdns)
-    * [Pull CDNs](#pull-cdns)
-* [Load balancer](#load-balancer)
-    * [Active-passive](#active-passive)
-    * [Active-active](#active-active)
-    * [Layer 4 load balancing](#layer-4-load-balancing)
-    * [Layer 7 load balancing](#layer-7-load-balancing)
-    * [Horizontal scaling](#horizontal-scaling)
-* [Reverse proxy (web server)](#reverse-proxy-web-server)
-    * [Load balancer vs reverse proxy](#load-balancer-vs-reverse-proxy)
-* [Application layer](#application-layer)
-    * [Microservices](#microservices)
-    * [Service discovery](#service-discovery)
-* [Database](#database)
-    * [Relational database management system (RDBMS)](#relational-database-management-system-rdbms)
-        * [Master-slave replication](#master-slave-replication)
-        * [Master-master replication](#master-master-replication)
-        * [Federation](#federation)
-        * [Sharding](#sharding)
-        * [Denormalization](#denormalization)
-        * [SQL tuning](#sql-tuning)
-    * [NoSQL](#nosql)
-        * [Key-value store](#key-value-store)
-        * [Document store](#document-store)
-        * [Wide column store](#wide-column-store)
-        * [Graph Database](#graph-database)
-    * [SQL or NoSQL](#sql-or-nosql)
-* [Cache](#cache)
-    * [Client caching](#client-caching)
-    * [CDN caching](#cdn-caching)
-    * [Web server caching](#web-server-caching)
-    * [Database caching](#database-caching)
-    * [Application caching](#application-caching)
-    * [Caching at the database query level](#caching-at-the-database-query-level)
-    * [Caching at the object level](#caching-at-the-object-level)
-    * [When to update the cache](#when-to-update-the-cache)
-        * [Cache-aside](#cache-aside)
-        * [Write-through](#write-through)
-        * [Write-behind (write-back)](#write-behind-write-back)
-        * [Refresh-ahead](#refresh-ahead)
-* [Asynchronism](#asynchronism)
-    * [Message queues](#message-queues)
-    * [Task queues](#task-queues)
-    * [Back pressure](#back-pressure)
-* [Communication](#communication)
-    * [Transmission control protocol (TCP)](#transmission-control-protocol-tcp)
-    * [User datagram protocol (UDP)](#user-datagram-protocol-udp)
-    * [Remote procedure call (RPC)](#remote-procedure-call-rpc)
-    * [Representational state transfer (REST)](#representational-state-transfer-rest)
-* [Security](#security)
-* [Appendix](#appendix)
-    * [Powers of two table](#powers-of-two-table)
-    * [Latency numbers every programmer should know](#latency-numbers-every-programmer-should-know)
-    * [Additional system design interview questions](#additional-system-design-interview-questions)
-    * [Real world architectures](#real-world-architectures)
-    * [Company architectures](#company-architectures)
-    * [Company engineering blogs](#company-engineering-blogs)
-* [Under development](#under-development)
-* [Credits](#credits)
-* [Contact info](#contact-info)
-* [License](#license)
+* [مواضيع تصميم الأنظمة: ابدأ من هنا](#system-design-topics-start-here)
+    * [خطوة 1: راجع مفهوم القدرة على التوسع في هذه المحاضرة ](#step-1-review-the-scalability-video-lecture)
+    * [خطوة 2: مقالة تشرح معنى القدرة على التوسع](#step-2-review-the-scalability-article)
+    * [الخطوات التالية](#next-steps)
+* [الأداء مقابل القدرة على التوسع](#performance-vs-scalability)
+* [وقت الاستجابة مقابل الإنتاجية](#latency-vs-throughput)
+* [التوفر مقابل التطابق](#availability-vs-consistency)
+    * [نظرية CAP](#cap-theorem)
+        * [CP - مدى قبول المطابقة والتجزئة](#cp---consistency-and-partition-tolerance)
+        * [AP - مدى قبول التوفر والتجزئة](#ap---availability-and-partition-tolerance)
+* [أنماط التطابق](#consistency-patterns)
+    * [تطابق ضعيف](#weak-consistency)
+    * [التطابق اللاحق](#eventual-consistency)
+    * [التطابق القوي](#strong-consistency)
+* [أنماط التوفر](#availability-patterns)
+    * [الدعم الإحتياطي](#fail-over)
+    * [التكرار](#replication)
+* [نظام اسم النطاق](#domain-name-system)
+* [شبكة توصيل المحتوى](#content-delivery-network)
+    * [شبكة توفير المحتوى (CDN) المعتمدة تدفع بالتحديثات عند حدوث أي تغيير](#push-cdns)
+    * [شبكة توفير المحتوى (CDN) تحدث المحتوى عند الطلب](#pull-cdns)
+* [موازن الأحمال](#load-balancer)
+    * [نشط-خامل](#active-passive)
+    * [نشط-نشط](#active-active)
+    * [موازنة أحمال الطبقة 4](#layer-4-load-balancing)
+    * [موازنة أحمال الطبقة 7](#layer-7-load-balancing)
+    * [التمدد الأفقي](#horizontal-scaling)
+* [وكيل عكسي (خادم الشبكة)](#reverse-proxy-web-server)
+    * [موزع الأحمال vs وكيل عكسي](#load-balancer-vs-reverse-proxy)
+* [طبقة التطبيق](#application-layer)
+    * [ميكروسيرفس](#microservices)
+    * [اكتشاف الخدمة](#service-discovery)
+* [قواعد بيانات](#database)
+    * [نظام ادارة قواعد البيانات العلائقية (RDBMS)](#relational-database-management-system-rdbms)
+        * [مضاعفة الخادم والتابع](#master-slave-replication)
+        * [مضاعفة الخادم](#master-master-replication)
+        * [اتحاد](#federation)
+        * [تجزئة](#sharding)
+        * [التخلص من العلاقات المعقدة](#denormalization)
+        * [ضبط وتحسين الإستعلامات](#sql-tuning)
+    * [قاعدة بيانات غير علائقية](#nosql)
+        * [التخزين بالمفتاح والقيمة](#key-value-store)
+        * [تخزين المستندات](#document-store)
+        * [تخزين عمود واسع](#wide-column-store)
+        * [قاعدة بيانات رسومية](#graph-database)
+    * [قاعدة بيانات علائقية أو غير علائقية](#sql-or-nosql)
+* [تخزين مؤقت](#cache)
+    * [تخزين مؤقت عند المستخدم](#client-caching)
+    * [تخزين مؤقت في (CDN) شبكة توفير المحتوى](#cdn-caching)
+    * [التخزين المؤقت في خادم الشبكة](#web-server-caching)
+    * [التخزين المؤقت في قواعد البيانات](#database-caching)
+    * [التخزين المؤقت في التطبيق](#application-caching)
+    * [التخزين المؤقت على مستوى الاستعلامات](#caching-at-the-database-query-level)
+    * [التخزين المؤقت على مستوى ال object](#caching-at-the-object-level)
+    * [متى تحدث التخزين المؤقت](#when-to-update-the-cache)
+        * [التخزين المؤقت الجانبي](#cache-aside)
+        * [الكتابة المباشرة](#write-through)
+        * [الكتابة في الخلفية](#write-behind-write-back)
+        * [التحديث الإستباقي](#refresh-ahead)
+* [التزامن](#asynchronism)
+    * [صفوف الرسائل](#message-queues)
+    * [صفوف المهام](#task-queues)
+    * [الضغط الخلفي](#back-pressure)
+* [التواصل](#communication)
+    * [بروتوكول التحكم بالإرسال (TCP)](#transmission-control-protocol-tcp)
+    * [بروتوكول مخطط المستخدم (UDP)](#user-datagram-protocol-udp)
+    * [إجراء اتصال عن بعد (RPC)](#remote-procedure-call-rpc)
+    * [نقل الحالة التمثيلي (REST)](#representational-state-transfer-rest)
+* [الأمن](#security)
+* [الملحق](#appendix)
+    * [جدول مضاعفات ال2](#powers-of-two-table)
+    * [أرقام لأوقات الاستجابة يجب على كل مبرمج ان يعلمها](#latency-numbers-every-programmer-should-know)
+    * [أسئلة تصميم انظمة إضافية](#additional-system-design-interview-questions)
+    * [أمثلة تصاميم هيكلية واقعية](#real-world-architectures)
+    * [هيكلة الشركات](#company-architectures)
+    * [مدونات الشركات التقنية](#company-engineering-blogs)
+* [تحت التطوير](#under-development)
+* [شُكر وتقدير](#credits)
+* [بيانات التواصل](#contact-info)
+* [رخصة](#license)
 
-## Study guide
+## ارشادات الدراسة
 
-> Suggested topics to review based on your interview timeline (short, medium, long).
+> مواضيع مقترحة للمراجعة بناءاً على الجدول الزمني للمقابلة (قصير, متوسط, طويل).
 
-![Imgur](http://i.imgur.com/OfVllex.png)
+![Imgur](images/OfVllex)
 
-**Q: For interviews, do I need to know everything here?**
+**س: هل يجب علي معرفة كل شيء هنا لإجتياز المقابلات ?**
 
-**A: No, you don't need to know everything here to prepare for the interview**.
+**ج: لا، ليس عليك معرفة كل شيء هنا للتحضير لمقابلة**.
 
-What you are asked in an interview depends on variables such as:
+ما يتم سؤالك عنه في المقابلات يعتمد على:
 
-* How much experience you have
-* What your technical background is
-* What positions you are interviewing for
-* Which companies you are interviewing with
-* Luck
+* الخبرة التي لديك
+* خلفيتك التقنية
+* طبيعة الوظيفة 
+* جهة العمل التي تقابلك
+* الحظ
 
-More experienced candidates are generally expected to know more about system design.  Architects or team leads might be expected to know more than individual contributors.  Top tech companies are likely to have one or more design interview rounds.
+يتوقع من المرشحين الأكثر خبرة بشكل عام ان تكون لديهم دراية أكبر عن تصميم الأنظمة. ربما يتوقع من المهندسون أو رؤساء الفرق ان تكون لديهم معرفة أكبر من باقي افراد الفريق. في الشركات التقنية الرائدة غالبا ما يكون هناك جولة أو اكثر من مقابلات تصميم النظام.
 
-Start broad and go deeper in a few areas.  It helps to know a little about various key system design topics.  Adjust the following guide based on your timeline, experience, what positions you are interviewing for, and which companies you are interviewing with.
+ابدأ بشكل موسع وعام ثم تعمق في بعض المواضيع. معرفة بسيطة عن بعض المواضيع المتنوعة لتصميم الأنظمة قد تساعدك كثيرا. عدل الدليل الإرشادي التالي بما يتناسب مع جدولك الزمني وخبرتك والوظيفة التي تقدم عليها بالإضافة لجهة العمل التي تقابلك.
 
-* **Short timeline** - Aim for **breadth** with system design topics.  Practice by solving **some** interview questions.
-* **Medium timeline** - Aim for **breadth** and **some depth** with system design topics.  Practice by solving **many** interview questions.
-* **Long timeline** - Aim for **breadth** and **more depth** with system design topics.  Practice by solving **most** interview questions.
+* **جدول زمني قصير** - التركيز على **التوسع** في مواضيع تصميم الأنظمة.  بالتدريب على حل **بعض** اسئلة المقابلات.
+* **جدول زمني متوسط** - التركيز على **التوسع** و **بعض التعمق** في مواضيع تصميم الأنظمة.  والتدريب على حل **العديد** من اسئلة المقابلات.
+* **جدول زمني طويل** - التركيز على **التوسع** و **تعمق أكثر** في مواضيع تصميم الأنظمة.  تدرب على حل **معظم** أسئلة المقابلات.
 
-| | Short | Medium | Long |
+| | قصير | متوسط | طويل |
 |---|---|---|---|
-| Read through the [System design topics](#index-of-system-design-topics) to get a broad understanding of how systems work | :+1: | :+1: | :+1: |
-| Read through a few articles in the [Company engineering blogs](#company-engineering-blogs) for the companies you are interviewing with | :+1: | :+1: | :+1: |
-| Read through a few [Real world architectures](#real-world-architectures) | :+1: | :+1: | :+1: |
-| Review [How to approach a system design interview question](#how-to-approach-a-system-design-interview-question) | :+1: | :+1: | :+1: |
-| Work through [System design interview questions with solutions](#system-design-interview-questions-with-solutions) | Some | Many | Most |
-| Work through [Object-oriented design interview questions with solutions](#object-oriented-design-interview-questions-with-solutions) | Some | Many | Most |
-| Review [Additional system design interview questions](#additional-system-design-interview-questions) | Some | Many | Most |
+| اقرأ [مواضيع تصميم الأنظمة](#index-of-system-design-topics) لتأخذ نظرة عامة على كيفية عمل الأنظمة | :+1: | :+1: | :+1: |
+| اقرأ بعض المقالات في [المدونة الهندسية للشركة](#company-engineering-blogs) التي ستجري لك المقابلة | :+1: | :+1: | :+1: |
+| اقرأ بعض المقالات عن [تصاميم هندسية من الواقع](#real-world-architectures) | :+1: | :+1: | :+1: |
+| استعرض [كيف تتعامل مع السؤال في مقابلة تصميم الأنظمة](#how-to-approach-a-system-design-interview-question) | :+1: | :+1: | :+1: |
+| ادرس [اسئلة مقابلات تصميم الأنظمة مع الحلول](#system-design-interview-questions-with-solutions) | البعض | العديد | معظم |
+| ادرس [اسئلة مقابلات في تصميم Object-oriented مع الحلول](#object-oriented-design-interview-questions-with-solutions) | البعض | العديد | معظم |
+| راجع [اسئلة مقابلات اضافية في تصميم الأنظمة](#additional-system-design-interview-questions) | البعض | العديد | معظم |
 
-## How to approach a system design interview question
+## كيف تتعامل مع سؤال في مقابلة تصميم الانظمة
 
-> How to tackle a system design interview question.
+> كيفية معالجة السؤال
 
-The system design interview is an **open-ended conversation**.  You are expected to lead it.
+تكون مقابلة تصميم الأنظمة **محادثة مفتوحة**.  يتوقع منك ان تقودها.
 
-You can use the following steps to guide the discussion.  To help solidify this process, work through the [System design interview questions with solutions](#system-design-interview-questions-with-solutions) section using the following steps.
+يمكنك اتخاذ الخطوات التالية لتوجيه النقاش. للمساعدة في ترسيخ هذه العملية، ادرس قسم [اسئلة مقابلة تصميم الأنظمة مع الحلول](#system-design-interview-questions-with-solutions) باستخدام الخطوات التالية.
 
-### Step 1: Outline use cases, constraints, and assumptions
+### خطوة 1: أجمل (حالات الإستخدام، القيود، والفرضيات)
 
-Gather requirements and scope the problem.  Ask questions to clarify use cases and constraints.  Discuss assumptions.
+جمع المتطلبات واحصر المشكلة. اسأل عن توضيح حالات الاستخدام والقيود وناقش الفرضيات.
 
-* Who is going to use it?
-* How are they going to use it?
-* How many users are there?
-* What does the system do?
-* What are the inputs and outputs of the system?
-* How much data do we expect to handle?
-* How many requests per second do we expect?
-* What is the expected read to write ratio?
+* من سيستخدم النظام ?
+* كيف سيتم استخدامه?
+* كم عدد المستخدمين?
+* ماذا يقدم النظام?
+* ماهي مدخلات ومخرجات النظام?
+* كم عدد البيانات المتوقع معالجتها?
+* كم عدد الطلبات المتوقع لكل ثانية?
+* ماهو معدل المتوقع للقراءة مقابل الكتابة?
 
-### Step 2: Create a high level design
+### خطوة 2: انشئ تصميم عام
 
-Outline a high level design with all important components.
+لخص التصميم العام مع كل المكونات الاساسية.
 
-* Sketch the main components and connections
-* Justify your ideas
+* ارسم مسودة للمكونات الاساسية والعلاقة ما بينها
+* برر أفكارك
 
-### Step 3: Design core components
+### خطوة 3: صمم المكونات الأساسية
 
-Dive into details for each core component.  For example, if you were asked to [design a url shortening service](solutions/system_design/pastebin/README.md), discuss:
+تعمق في تفاصيل كل مكون. مثلا، اذا طلب منك [تصميم خدمة اختصار روابط](solutions/system_design/pastebin/README.md), ناقش:
 
-* Generating and storing a hash of the full url
+* انتاج وتخزين ترميز hash لرابط كامل
     * [MD5](solutions/system_design/pastebin/README.md) and [Base62](solutions/system_design/pastebin/README.md)
-    * Hash collisions
-    * SQL or NoSQL
-    * Database schema
-* Translating a hashed url to the full url
-    * Database lookup
-* API and object-oriented design
+    * تصادم الترميز
+    * قاعدة بيانات علائقية أو غير علائقية
+    * مخطط قاعدة البيانات
+* إعادة ترجمة رابط مرمز
+    * البحث في قواعد البينات
+* تصميم واجهة برمجة التطبيقات و object-oriented
 
-### Step 4: Scale the design
+### خطوة 4: اجعل النظام قابل للتوسع
 
-Identify and address bottlenecks, given the constraints.  For example, do you need the following to address scalability issues?
+قم بتحديد وتعريف مراكز عنق الزجاجة، مع الاخد القيود بعين الإعتبار. مثلا هل تحتاج احد هذه الأمور لزيادة قابلية التوسع؟
 
-* Load balancer
-* Horizontal scaling
-* Caching
-* Database sharding
+* موزع احمال
+* توسع افقي
+* تخزين مؤقت
+* تقسيم قاعدة البيانات
 
-Discuss potential solutions and trade-offs.  Everything is a trade-off.  Address bottlenecks using [principles of scalable system design](#index-of-system-design-topics).
+ادرس احتمالات الحلول وآثارها. كل شيء عبارة عن مقايضة. حدد مراكز عنق الزجاجة بواسطة [مبادئ تصميم الأنظمة القابلة للتوسع](#index-of-system-design-topics).
 
-### Back-of-the-envelope calculations
+### حسابات تقريبية
 
-You might be asked to do some estimates by hand.  Refer to the [Appendix](#appendix) for the following resources:
+ربما يطلب منك ان تقوم ببعض التقييمات اليدوية [ملحق](#appendix) لبعض هذه المصادر:
 
-* [Use back of the envelope calculations](http://highscalability.com/blog/2011/1/26/google-pro-tip-use-back-of-the-envelope-calculations-to-choo.html)
-* [Powers of two table](#powers-of-two-table)
-* [Latency numbers every programmer should know](#latency-numbers-every-programmer-should-know)
+* [استخدام تقييمات تقريبية](http://highscalability.com/blog/2011/1/26/google-pro-tip-use-back-of-the-envelope-calculations-to-choo.html)
+* [جدول مضاعفات ال2](#powers-of-two-table)
+* [أرقام لأوقات الاستجابة يجب على كل مبرمج ان يعلمها](#latency-numbers-every-programmer-should-know)
 
-### Source(s) and further reading
+### مصادر وقراءة أكثر
 
-Check out the following links to get a better idea of what to expect:
 
-* [How to ace a systems design interview](https://www.palantir.com/2011/10/how-to-rock-a-systems-design-interview/)
-* [The system design interview](http://www.hiredintech.com/system-design)
-* [Intro to Architecture and Systems Design Interviews](https://www.youtube.com/watch?v=ZgdS0EUmn70)
+تحقق من الروابط التالية للحصول على فكرة أفضل عما يمكن توقعه:
 
-## System design interview questions with solutions
+* [كيف تحسم مقابلة تصميم الأنظكة](https://www.palantir.com/2011/10/how-to-rock-a-systems-design-interview/)
+* [مقابلة تصميم الأنظمة](http://www.hiredintech.com/system-design)
+* [مقدمة لمقابلات تصميم العمارة والنظم](https://www.youtube.com/watch?v=ZgdS0EUmn70)
 
-> Common system design interview questions with sample discussions, code, and diagrams.
+## أسئلة مقابلة تصميم الأنظمة مع الحلول
+
+> أسئلة مقابلة تصميم النظام الشائعة مع نماذج المناقشات ، والأكواد ، والمخططات.
 >
-> Solutions linked to content in the `solutions/` folder.
+> تجد الحلول مرتبطة بالمحتوى في مجلد `solutions/`.
 
-| Question | |
+| أسئلة | |
 |---|---|
-| Design Pastebin.com (or Bit.ly) | [Solution](solutions/system_design/pastebin/README.md) |
-| Design the Twitter timeline (or Facebook feed)<br/>Design Twitter search (or Facebook search) | [Solution](solutions/system_design/twitter/README.md) |
-| Design a web crawler | [Solution](solutions/system_design/web_crawler/README.md) |
-| Design Mint.com | [Solution](solutions/system_design/mint/README.md) |
-| Design the data structures for a social network | [Solution](solutions/system_design/social_graph/README.md) |
-| Design a key-value store for a search engine | [Solution](solutions/system_design/query_cache/README.md) |
-| Design Amazon's sales ranking by category feature | [Solution](solutions/system_design/sales_rank/README.md) |
-| Design a system that scales to millions of users on AWS | [Solution](solutions/system_design/scaling_aws/README.md) |
-| Add a system design question | [Contribute](#contributing) |
+| صمم Pastebin.com (or Bit.ly) | [الحل](solutions/system_design/pastebin/README.md) |
+| صمم حائط تويتر (او تحديثات فيسبوك)<br/>صمم بحث تويتر (أو بحث فيسبوك) | [الحل](solutions/system_design/twitter/README.md) |
+| صمم عناكب الشبكة | [الحل](solutions/system_design/web_crawler/README.md) |
+| صمم Mint.com | [الحل](solutions/system_design/mint/README.md) |
+| صمم تراكيب بيانات منصة اجتماعية | [الحل](solutions/system_design/social_graph/README.md) |
+| صمم مخزن مفتاح-قيمة لمحرك بحث | [الحل](solutions/system_design/query_cache/README.md) |
+| تصميم ترتيب مبيعات أمازون حسب الفئة | [الحل](solutions/system_design/sales_rank/README.md) |
+| صمم نظامًا يتسع لملايين المستخدمين على AWS | [الحل](solutions/system_design/scaling_aws/README.md) |
+| أضف سؤال لتصميم نظام | [شارك](#contributing) |
 
-### Design Pastebin.com (or Bit.ly)
+### تصميم Pastebin.com (أو Bit.ly)
 
-[View exercise and solution](solutions/system_design/pastebin/README.md)
+[عرض التمرين والحل](solutions/system_design/pastebin/README.md)
 
-![Imgur](http://i.imgur.com/4edXG0T.png)
+![Imgur](images/4edXG0T.png)
 
-### Design the Twitter timeline and search (or Facebook feed and search)
+### تصميم الجدول الزمني Twitter والبحث (أو موجز Facebook والبحث)
 
-[View exercise and solution](solutions/system_design/twitter/README.md)
+[عرض التمرين والحل](solutions/system_design/twitter/README.md)
 
-![Imgur](http://i.imgur.com/jrUBAF7.png)
+![Imgur](images/jrUBAF7.png)
 
-### Design a web crawler
+### تصميم زاحف الويب
 
-[View exercise and solution](solutions/system_design/web_crawler/README.md)
+[عرض التمرين والحل](solutions/system_design/web_crawler/README.md)
 
-![Imgur](http://i.imgur.com/bWxPtQA.png)
+![Imgur](images/bWxPtQA.png)
 
-### Design Mint.com
+### صمم Mint.com
 
-[View exercise and solution](solutions/system_design/mint/README.md)
+[عرض التمرين والحل](solutions/system_design/mint/README.md)
 
-![Imgur](http://i.imgur.com/V5q57vU.png)
+![Imgur](images/V5q57vU.png)
 
-### Design the data structures for a social network
+### صمم تراكيب البيانات لشبكة اجتماعية
 
-[View exercise and solution](solutions/system_design/social_graph/README.md)
+[عرض التمرين والحل](solutions/system_design/social_graph/README.md)
 
-![Imgur](http://i.imgur.com/cdCv5g7.png)
+![Imgur](images/cdCv5g7.png)
 
-### Design a key-value store for a search engine
+### تصميم مخزن مفتاح-قيمة لمحرك بحث
 
-[View exercise and solution](solutions/system_design/query_cache/README.md)
+[عرض التمرين والحل](solutions/system_design/query_cache/README.md)
 
-![Imgur](http://i.imgur.com/4j99mhe.png)
+![Imgur](images/4j99mhe.png)
 
-### Design Amazon's sales ranking by category feature
+### تصميم ترتيب مبيعات أمازون حسب الفئة
 
-[View exercise and solution](solutions/system_design/sales_rank/README.md)
+[عرض التمرين والحل](solutions/system_design/sales_rank/README.md)
 
 ![Imgur](http://i.imgur.com/MzExP06.png)
 
-### Design a system that scales to millions of users on AWS
+### صمم نظامًا يتسع لملايين المستخدمين على AWS
 
-[View exercise and solution](solutions/system_design/scaling_aws/README.md)
+[عرض التمرين والحل](solutions/system_design/scaling_aws/README.md)
 
 ![Imgur](http://i.imgur.com/jj3A5N8.png)
 
-## Object-oriented design interview questions with solutions
+## أسئلة مقابلة تصميم object-oriented مع الحلول
 
-> Common object-oriented design interview questions with sample discussions, code, and diagrams.
+> أسئلة مقابة تصميم object-oriented مع نماذج مناقشات، أكواد، ومخططات.
 >
-> Solutions linked to content in the `solutions/` folder.
+> الحلول مرتبطة بالمحتوى في مجلد `solutions/`.
 
->**Note: This section is under development**
+>**ملاحظة: هذا القسم قيد التطوير**
 
-| Question | |
+| سؤال | |
 |---|---|
-| Design a hash map | [Solution](solutions/object_oriented_design/hash_table/hash_map.ipynb)  |
-| Design a least recently used cache | [Solution](solutions/object_oriented_design/lru_cache/lru_cache.ipynb)  |
-| Design a call center | [Solution](solutions/object_oriented_design/call_center/call_center.ipynb)  |
-| Design a deck of cards | [Solution](solutions/object_oriented_design/deck_of_cards/deck_of_cards.ipynb)  |
-| Design a parking lot | [Solution](solutions/object_oriented_design/parking_lot/parking_lot.ipynb)  |
-| Design a chat server | [Solution](solutions/object_oriented_design/online_chat/online_chat.ipynb)  |
-| Design a circular array | [Contribute](#contributing)  |
-| Add an object-oriented design question | [Contribute](#contributing) |
+| تصميم hash map | [الحل](solutions/object_oriented_design/hash_table/hash_map.ipynb)  |
+| تصميم ذاكرة التخزين المؤقت الأقل استخدامًا مؤخرًا | [الحل](solutions/object_oriented_design/lru_cache/lru_cache.ipynb)  |
+| تصميم مركز اتصال | [الحل](solutions/object_oriented_design/call_center/call_center.ipynb)  |
+| صمم مجموعة من البطاقات | [الحل](solutions/object_oriented_design/deck_of_cards/deck_of_cards.ipynb)  |
+| تصميم موقف للسيارات | [الحل](solutions/object_oriented_design/parking_lot/parking_lot.ipynb)  |
+| صمم خادم دردشة | [الحل](solutions/object_oriented_design/online_chat/online_chat.ipynb)  |
+| تصميم مصفوفة دائرية | [شارك](#contributing)  |
+| أضف سؤال تصميم object-oriented | [شارك](#contributing) |
 
-## System design topics: start here
+## مواضيع تصميم الأنظمة:إبدا من هنا
 
-New to system design?
+هل انت جديد على تصميم الأنظمة?
 
-First, you'll need a basic understanding of common principles, learning about what they are, how they are used, and their pros and cons.
+أولاً ، ستحتاج إلى فهم أساسي للمبادئ المشتركة ، والتعرف على ماهيتها ، وكيفية استخدامها ، ومزاياها وعيوبها.
 
-### Step 1: Review the scalability video lecture
+### الخطوة 1: راجع محاضرة فيديو قابلية التوسع
 
-[Scalability Lecture at Harvard](https://www.youtube.com/watch?v=-W9F__D3oY4)
+[محاضرة التوسع في جامعة هارفارد](https://www.youtube.com/watch?v=-W9F__D3oY4)
 
-* Topics covered:
-    * Vertical scaling
-    * Horizontal scaling
-    * Caching
-    * Load balancing
-    * Database replication
-    * Database partitioning
+* المواضيع التي تمت تغطيتها:
+    * التوسع العمودي
+    * التوسع الأفقي
+    * التخزين المؤقت
+    * توزيع الأحمال
+    * تكرار قواعد البيانات
+    * تقسيم قواعد البيانات
 
-### Step 2: Review the scalability article
+### الخطوة 2: راجع مقالة قابلية التوسع
 
-[Scalability](http://www.lecloud.net/tagged/scalability)
+[قابلية التوسع](http://www.lecloud.net/tagged/scalability)
 
-* Topics covered:
-    * [Clones](http://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones)
-    * [Databases](http://www.lecloud.net/post/7994751381/scalability-for-dummies-part-2-database)
-    * [Caches](http://www.lecloud.net/post/9246290032/scalability-for-dummies-part-3-cache)
-    * [Asynchronism](http://www.lecloud.net/post/9699762917/scalability-for-dummies-part-4-asynchronism)
+* المواضيع التي تمت تغطيتها:
+    * [نسخ](http://www.lecloud.net/post/7295452622/scalability-for-dummies-part-1-clones)
+    * [قواعد البيانات](http://www.lecloud.net/post/7994751381/scalability-for-dummies-part-2-database)
+    * [تخزين مؤقت](http://www.lecloud.net/post/9246290032/scalability-for-dummies-part-3-cache)
+    * [المزامنة](http://www.lecloud.net/post/9699762917/scalability-for-dummies-part-4-asynchronism)
 
-### Next steps
+### خطوات تالية
 
-Next, we'll look at high-level trade-offs:
+بعد ذلك ، سنلقي نظرة على المقايضات العامة:
 
-* **Performance** vs **scalability**
-* **Latency** vs **throughput**
-* **Availability** vs **consistency**
+* **الأداء** vs **التوسع**
+* **وقت الإستجابة** vs **الإنتاجية**
+* **التوافر** vs **التطابق والثبات**
 
-Keep in mind that **everything is a trade-off**.
+تذكر **كل شيء مقايضة**.
 
-Then we'll dive into more specific topics such as DNS, CDNs, and load balancers.
+ثم سنتعمق في مواضيع أكثر تحديدًا مثل DNS و CDNs وموازنة الأحمال.
 
-## Performance vs scalability
+## الأداء مقابل قابلية التوسع
 
-A service is **scalable** if it results in increased **performance** in a manner proportional to resources added. Generally, increasing performance means serving more units of work, but it can also be to handle larger units of work, such as when datasets grow.<sup><a href=http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html>1</a></sup>
+تكون الخدمة ** قابلة للتطوير ** إذا أدت إلى زيادة ** الأداء ** بطريقة تتناسب مع الموارد المضافة. بشكل عام ، تعني زيادة الأداء خدمة المزيد من وحدات العمل ، ولكن يمكن أيضًا التعامل مع وحدات عمل أكبر ، كما هو الحال عندما تنمو مجموعات البيانات.<sup><a href=http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html>1</a></sup>
 
-Another way to look at performance vs scalability:
+طريقة أخرى للنظر إلى الأداء مقابل قابلية التوسع:
 
-* If you have a **performance** problem, your system is slow for a single user.
-* If you have a **scalability** problem, your system is fast for a single user but slow under heavy load.
+* إذا كانت لديك مشكلة ** في الأداء ** ، فهذا يعني أن نظامك بطيء لمستخدم واحد.
+* إذا كانت لديك مشكلة ** قابلية التوسع ** ، فإن نظامك سريع لمستخدم واحد ولكنه بطيء في ظل الحمل الثقيل.
+
+### المصادر ومزيد من القراءة
+
+* [كلمة عن قابلية التوسع](http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html)
+* [قابلية التوسع والتوافر والاستقرار والأنماط](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
+
+## زمن الإستجابة مقابل الإنتاجية
+
+**زمن الإستجابة** هو الوقت المناسب لأداء بعض الإجراءات أو لإنتاج بعض النتائج.
+
+**الإنتاجية** هو عدد هذه الإجراءات أو النتائج لكل وحدة زمنية.
+
+بشكل عام ، يجب أن تهدف إلى تحقيق **أقصى قدر من الإنتاجية** مع **زمن استجابة مقبول**.
 
 ### Source(s) and further reading
 
-* [A word on scalability](http://www.allthingsdistributed.com/2006/03/a_word_on_scalability.html)
-* [Scalability, availability, stability, patterns](http://www.slideshare.net/jboner/scalability-availability-stability-patterns/)
+* [فهم الإنتاجية مقابل زمن الإستجابة](https://community.cadence.com/cadence_blogs_8/b/sd/archive/2010/09/13/understanding-latency-vs-throughput)
 
-## Latency vs throughput
+## التوافر مقابل ضبط التطابق
 
-**Latency** is the time to perform some action or to produce some result.
-
-**Throughput** is the number of such actions or results per unit of time.
-
-Generally, you should aim for **maximal throughput** with **acceptable latency**.
-
-### Source(s) and further reading
-
-* [Understanding latency vs throughput](https://community.cadence.com/cadence_blogs_8/b/sd/archive/2010/09/13/understanding-latency-vs-throughput)
-
-## Availability vs consistency
-
-### CAP theorem
+### CAP نظرية
 
 <p align="center">
-  <img src="http://i.imgur.com/bgLMI2u.png">
+  <img src="images/bgLMI2u.png">
   <br/>
-  <i><a href=http://robertgreiner.com/2014/08/cap-theorem-revisited>Source: CAP theorem revisited</a></i>
+  <i><a href=http://robertgreiner.com/2014/08/cap-theorem-revisited>المصدر: إعادة النظر في نظرية CAP</a></i>
 </p>
 
-In a distributed computer system, you can only support two of the following guarantees:
+في نظام الكمبيوتر الموزع ، يمكنك فقط دعم اثنين من الضمانات التالية:
 
-* **Consistency** - Every read receives the most recent write or an error
-* **Availability** - Every request receives a response, without guarantee that it contains the most recent version of the information
-* **Partition Tolerance** - The system continues to operate despite arbitrary partitioning due to network failures
+* **الثبات والتطابق** - كل قراءة تتلقى أحدث كتابة أو خطأ
+* **التوافر** - يتلقى كل طلب ردًا ، دون ضمان احتوائه على أحدث نسخة من المعلومات
+* **مسامحة التقسيم** - النظام يبقى متوفر على الرغم من التوزيعات العشوائية الحاصلة بسبب خطأ في الشبكة
 
-*Networks aren't reliable, so you'll need to support partition tolerance.  You'll need to make a software tradeoff between consistency and availability.*
+*الشبكات ليست موثوقة ، لذا ستحتاج إلى دعم تسامح التقسيم. ستحتاج إلى إجراء مقايضة برمجية بين التطابق والتوافر.*
 
-#### CP - consistency and partition tolerance
+#### CP - تفاوت التطابق والتقسيم
 
-Waiting for a response from the partitioned node might result in a timeout error.  CP is a good choice if your business needs require atomic reads and writes.
+قد يؤدي انتظار استجابة من العقدة المقسمة إلى حدوث خطأ انتهاء المهلة. CP خيار جيد إذا كانت احتياجات عملك تتطلب قراءة وكتابة محتّمة.
 
-#### AP - availability and partition tolerance
+#### AP - تفاوت التوافر والتقسيم
 
-Responses return the most recent version of the data available on the a node, which might not be the latest.  Writes might take some time to propagate when the partition is resolved.
+تعرض الردود أحدث إصدار من البيانات المتاحة على العقدة ، والتي قد لا تكون الأحدث. قد تستغرق عمليات الكتابة بعض الوقت للنشر عند الإنتهاء من التجزئة.
 
-AP is a good choice if the business needs allow for [eventual consistency](#eventual-consistency) or when the system needs to continue working despite external errors.
+AP يعد اختيارًا جيدًا إذا كانت احتياجات العمل تسمح [التطابق اللاحق] (#eventual-consistency) أو عندما يحتاج النظام إلى مواصلة العمل على الرغم من الأخطاء الخارجية.
 
-### Source(s) and further reading
+### مصادر ومزيد من القراءة
 
-* [CAP theorem revisited](http://robertgreiner.com/2014/08/cap-theorem-revisited/)
-* [A plain english introduction to CAP theorem](http://ksat.me/a-plain-english-introduction-to-cap-theorem/)
-* [CAP FAQ](https://github.com/henryr/cap-faq)
+* [CAP إعادة النظر في نظرية](http://robertgreiner.com/2014/08/cap-theorem-revisited/)
+* [مقدمة بسيطة باللغة الإنجليزية لنظرية CAP](http://ksat.me/a-plain-english-introduction-to-cap-theorem/)
+* [CAP اسئلة شائعة](https://github.com/henryr/cap-faq)
 
 ## Consistency patterns
 
